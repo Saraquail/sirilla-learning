@@ -1,6 +1,6 @@
 # Spaced Repetition Capstone - Client
 
-Written by Sara Mills and Brandon Leek
+Written by Sara Mills
 
 ## Link to live app
 
@@ -8,11 +8,11 @@ https://spaced-repetition-sb.now.sh/
 
 ## Link to client repo
 
-https://github.com/thinkful-ei-macaw/spaced-repetition-client-Brandon-Sara
+https://github.com/Saraquail/sirilla-learning
 
 ## Link to server repo
 
-https://github.com/thinkful-ei-macaw/spaced-repetition-api-Brandon-Sara
+https://github.com/Saraquail/sirilla-learning-api
 
 ## Summary
 
@@ -42,6 +42,8 @@ This is a `create-react-app` project so `npm start` will start the project in de
 This project uses [Cypress IO](https://docs.cypress.io) for integration testing using the Chrome browser.
 
 Cypress has the following expectations:
+
+THESE TESTS NEED TO BE UPDATED TO MATCH LATEST REFACTOR
 
 - You have cypress installed (this is a devDependency of the project)
 - You have your application running at http://localhost:3000.
