@@ -14,9 +14,7 @@ class Header extends Component {
   renderLogoutLink() {
     return (
       <div>
-        <header>Sirilla Learning</header>
         <p className="score">Your total score is: {this.props.score}</p>
-
         <nav className="nav">
           <Link onClick={this.handleLogoutClick} to="/login">
             Logout
@@ -36,17 +34,15 @@ class Header extends Component {
 
   render() {
     return (
-      <header>
-        <div className="header">
-          <h1>
+      <section className="header">
+          <header>
             <Link to="/">Sirilla Learning</Link>
-          </h1>
-        </div>
+          </header>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
         <div className="bar"></div>
-      </header>
+      </section>
     );
   }
 }

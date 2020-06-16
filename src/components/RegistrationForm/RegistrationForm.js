@@ -41,10 +41,10 @@ class RegistrationForm extends Component {
   render() {
     const { error } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="RegistrationForm" onSubmit={this.handleSubmit}>
         <div role="alert">{error && <p>{error}</p>}</div>
         <img src={img} alt="cityscape of madrid" />
-        <div>
+        <div className="input-container">
           <Label htmlFor="registration-name-input">
             Enter your name
             <Required />
@@ -56,14 +56,14 @@ class RegistrationForm extends Component {
             required
           />
         </div>
-        <div>
+        <div className="input-container">
           <Label htmlFor="registration-username-input">
             Choose a username
             <Required />
           </Label>
           <Input id="registration-username-input" name="username" required />
         </div>
-        <div>
+        <div className="input-container">
           <Label htmlFor="registration-password-input">
             Choose a password
             <Required />

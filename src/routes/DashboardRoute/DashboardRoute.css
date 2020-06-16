@@ -1,12 +1,13 @@
 .user-name {
   font-size: var(--fs-h2);
+  margin-top: 0.5em;
 }
 
 .word-list {
   margin: 0 auto;
   display: grid;
   grid-gap: 2.5em;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .word-to-practice {
@@ -22,6 +23,5 @@
 }
 
 h2 {
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
-  

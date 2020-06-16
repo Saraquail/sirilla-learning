@@ -50,7 +50,7 @@ class LoginForm extends Component {
         <div role="alert">{error && <p>{error}</p>}</div>
         <img src={img} alt="cityscape of madrid" />
 
-        <div>
+        <div className="input-container">
           <Label htmlFor="login-username-input">Username</Label>
           <Input
             ref={this.firstInput}
@@ -59,7 +59,7 @@ class LoginForm extends Component {
             required
           />
         </div>
-        <div>
+        <div className="input-container">
           <Label htmlFor="login-password-input">Password</Label>
           <Input
             id="login-password-input"

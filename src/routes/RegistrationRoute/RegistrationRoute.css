@@ -1,0 +1,20 @@
+.register header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100vw;
+  background-color: var(--clr-dark);
+}
+
+.register p {
+  background-color: var(--clr-dark);
+  color: var(--clr-accent);
+}
+
+.register h2 {
+  margin-top: 0.5em;
+}
+
+.register button {
+  margin-right: 0.5em;
+}

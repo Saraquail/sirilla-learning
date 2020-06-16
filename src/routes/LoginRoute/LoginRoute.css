@@ -1,0 +1,20 @@
+.login header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100vw;
+  background-color: var(--clr-dark);
+}
+
+.login p {
+  background-color: var(--clr-dark);
+  color: var(--clr-accent);
+}
+
+.login h2 {
+  margin-top: 0.5em;
+}
+
+.login button {
+  margin-right: 0.5em;
+}

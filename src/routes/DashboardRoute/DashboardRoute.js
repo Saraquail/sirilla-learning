@@ -54,10 +54,10 @@ class DashboardRoute extends Component {
     return (
       <section className="dashboard">
         <Header score={this.state.score} />
-        <span className="user-name">Welcome, {this.context.user.name}!</span>
-        <h2>{this.state.language}</h2>
+        <h2 className="user-name">Welcome, {this.context.user.name}!</h2>
+        <h3>You are currently learning: {this.state.language}</h3>
         <div role="alert">{error && <p>{error}</p>}</div>
-        <h3>Words to practice</h3>
+        <p>Words to practice</p>
         <ul className="word-list">{this.state.wordsToPractice}</ul>
         <Link to="/learn">
           <Button>Start practicing</Button>
