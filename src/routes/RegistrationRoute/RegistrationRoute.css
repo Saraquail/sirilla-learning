@@ -9,6 +9,7 @@
 .register p {
   background-color: var(--clr-dark);
   color: var(--clr-accent);
+  padding-bottom: 0.5em;
 }
 
 .register h2 {

@@ -4,7 +4,6 @@ import AuthApiService from '../../services/auth-api-service';
 import UserContext from '../../contexts/UserContext';
 import Button from '../Button/Button';
 import './LoginForm.css';
-import img from '../../imgs/madrid.jpg';
 import { Link } from 'react-router-dom';
 
 class LoginForm extends Component {
@@ -48,8 +47,6 @@ class LoginForm extends Component {
     return (
       <form className="LoginForm" onSubmit={this.handleSubmit}>
         <div role="alert">{error && <p>{error}</p>}</div>
-        <img src={img} alt="cityscape of madrid" />
-
         <div className="input-container">
           <Label htmlFor="login-username-input">Username</Label>
           <Input

@@ -63,7 +63,7 @@ header {
   text-align: center;
   font-family: var(--ff-header);
   font-size: var(--fs-h1);
-  color: var(--clr-accent)
+  color: var(--clr-accent);
 }
 
 button {
@@ -78,8 +78,8 @@ button {
   letter-spacing: 2px;
   font-weight: var(--fw-bold);
   transition: transform 200ms ease-in-out;
-  border-radius: .5em;
-  border: .5px solid var(--clr-dark);
+  border-radius: 0.5em;
+  border: 0.5px solid var(--clr-dark);
   margin-top: 0;
   margin-bottom: 3em;
 }
@@ -89,7 +89,7 @@ button:hover {
 }
 
 input {
-  border-radius: .5em;
+  border-radius: 0.5em;
   height: 2em;
   margin: 1em;
 }

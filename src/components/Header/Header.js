@@ -35,13 +35,12 @@ class Header extends Component {
   render() {
     return (
       <section className="header">
-          <header>
-            <Link to="/">Sirilla Learning</Link>
-          </header>
+        <header>
+          <Link to="/">Sirilla Learning</Link>
+        </header>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
-        <div className="bar"></div>
       </section>
     );
   }

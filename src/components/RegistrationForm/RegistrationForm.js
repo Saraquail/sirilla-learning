@@ -4,7 +4,6 @@ import { Input, Required, Label } from '../Form/Form';
 import AuthApiService from '../../services/auth-api-service';
 import Button from '../Button/Button';
 import './RegistrationForm.css';
-import img from '../../imgs/madrid.jpg';
 
 class RegistrationForm extends Component {
   static defaultProps = {
@@ -43,7 +42,6 @@ class RegistrationForm extends Component {
     return (
       <form className="RegistrationForm" onSubmit={this.handleSubmit}>
         <div role="alert">{error && <p>{error}</p>}</div>
-        <img src={img} alt="cityscape of madrid" />
         <div className="input-container">
           <Label htmlFor="registration-name-input">
             Enter your name
@@ -76,6 +74,7 @@ class RegistrationForm extends Component {
           />
         </div>
         <footer>
+          <Button type="submit">Sign up</Button>
           <Link to="/login">Already have an account?</Link>
         </footer>
       </form>
