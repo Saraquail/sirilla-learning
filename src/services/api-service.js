@@ -1,41 +1,41 @@
-import config from "../config";
-import TokenService from "./token-service";
+import config from '../config';
+import TokenService from './token-service';
 
 const ApiService = {
   getLanguage() {
     return fetch(`${config.REACT_APP_API_ENDPOINT}/language`, {
-      method: "GET",
+      method: 'GET',
       headers: {
-        authorization: `Bearer ${TokenService.getAuthToken()}`,
-      },
-    }).then((res) =>
-      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+        authorization: `Bearer ${TokenService.getAuthToken()}`
+      }
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
   },
 
   getNextWord() {
     return fetch(`${config.REACT_APP_API_ENDPOINT}/language/head`, {
-      method: "GET",
+      method: 'GET',
       headers: {
-        authorization: `Bearer ${TokenService.getAuthToken()}`,
-      },
-    }).then((res) =>
-      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+        authorization: `Bearer ${TokenService.getAuthToken()}`
+      }
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
   },
 
   getResults(guess) {
     return fetch(`${config.REACT_APP_API_ENDPOINT}/language/guess`, {
-      method: "POST",
+      method: 'POST',
       headers: {
         authorization: `Bearer ${TokenService.getAuthToken()}`,
-        "content-type": "application/json",
+        'content-type': 'application/json'
       },
-      body: JSON.stringify({ guess }),
-    }).then((res) =>
-      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+      body: JSON.stringify({ guess })
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
-  },
+  }
 };
 
 export default ApiService;

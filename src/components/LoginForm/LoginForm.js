@@ -1,13 +1,15 @@
-import React, { Component } from "react";
-import { Input, Label } from "../Form/Form";
-import AuthApiService from "../../services/auth-api-service";
-import UserContext from "../../contexts/UserContext";
-import Button from "../Button/Button";
-import './LoginForm.css'
+import React, { Component } from 'react';
+import { Input, Label } from '../Form/Form';
+import AuthApiService from '../../services/auth-api-service';
+import UserContext from '../../contexts/UserContext';
+import Button from '../Button/Button';
+import './LoginForm.css';
+import img from '../../imgs/madrid.jpg';
+import { Link } from 'react-router-dom';
 
 class LoginForm extends Component {
   static defaultProps = {
-    onLoginSuccess: () => {},
+    onLoginSuccess: () => {}
   };
 
   static contextType = UserContext;
@@ -16,7 +18,7 @@ class LoginForm extends Component {
 
   firstInput = React.createRef();
 
-  handleSubmit = (ev) => {
+  handleSubmit = ev => {
     ev.preventDefault();
     const { username, password } = ev.target;
 
@@ -24,15 +26,15 @@ class LoginForm extends Component {
 
     AuthApiService.postLogin({
       username: username.value,
-      password: password.value,
+      password: password.value
     })
-      .then((res) => {
-        username.value = "";
-        password.value = "";
+      .then(res => {
+        username.value = '';
+        password.value = '';
         this.context.processLogin(res.authToken);
         this.props.onLoginSuccess();
       })
-      .catch((res) => {
+      .catch(res => {
         this.setState({ error: res.error });
       });
   };
@@ -46,6 +48,8 @@ class LoginForm extends Component {
     return (
       <form className="LoginForm" onSubmit={this.handleSubmit}>
         <div role="alert">{error && <p>{error}</p>}</div>
+        <img src={img} alt="cityscape of madrid" />
+
         <div>
           <Label htmlFor="login-username-input">Username</Label>
           <Input
@@ -65,6 +69,7 @@ class LoginForm extends Component {
           />
         </div>
         <Button type="submit">Login</Button>
+        <Link to="/register">Don't have an account?</Link>
       </form>
     );
   }

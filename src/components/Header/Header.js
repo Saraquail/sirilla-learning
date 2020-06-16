@@ -1,9 +1,8 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import TokenService from "../../services/token-service";
-import UserContext from "../../contexts/UserContext";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import TokenService from '../../services/token-service';
+import UserContext from '../../contexts/UserContext';
 import './Header.css';
-import madridImg from '../../imgs/madrid.jpg';
 
 class Header extends Component {
   static contextType = UserContext;
@@ -15,7 +14,9 @@ class Header extends Component {
   renderLogoutLink() {
     return (
       <div>
-        <span className="user-name">Welcome, {this.context.user.name}!</span>
+        <header>Sirilla Learning</header>
+        <p className="score">Your total score is: {this.props.score}</p>
+
         <nav className="nav">
           <Link onClick={this.handleLogoutClick} to="/login">
             Logout
@@ -36,18 +37,15 @@ class Header extends Component {
   render() {
     return (
       <header>
-      <div>
-        <h1>
-          <Link to="/">Sirilla Learning</Link>
-        </h1>  
-          {TokenService.hasAuthToken()
+        <div className="header">
+          <h1>
+            <Link to="/">Sirilla Learning</Link>
+          </h1>
+        </div>
+        {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
-          </div>
-        <div className="madrid-img">
-          <img src={madridImg} alt="cityscape of madrid" />
-        </div>
-
+        <div className="bar"></div>
       </header>
     );
   }

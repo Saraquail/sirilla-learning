@@ -1,24 +1,25 @@
-import React, { Component } from "react";
-import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
+import React, { Component } from 'react';
+import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 
 class RegistrationRoute extends Component {
   static defaultProps = {
     history: {
-      push: () => {},
-    },
+      push: () => {}
+    }
   };
 
   handleRegistrationSuccess = () => {
     const { history } = this.props;
-    history.push("/login");
+    history.push('/login');
   };
 
   render() {
     return (
-      <section>
+      <section className="register">
+        <header>Sirilla Learning</header>
         <p>
           Practice learning a language with the spaced repetition revision
-          technique.  
+          technique.
         </p>
         <h2>Sign up</h2>
         <RegistrationForm

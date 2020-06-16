@@ -1,18 +1,18 @@
-import Button from "./../../components/Button/Button";
-import { Input, Label } from "../Form/Form";
+import Button from './../../components/Button/Button';
+import { Input, Label } from '../Form/Form';
 
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class LearningPage extends Component {
   state = {
-    error: null,
+    error: null
   };
 
   static defaultProps = {
     location: {},
     history: {
-      push: () => {},
-    },
+      push: () => {}
+    }
   };
 
   render() {
@@ -41,5 +41,3 @@ class LearningPage extends Component {
     );
   }
 }
-
-export default LearningPage;
