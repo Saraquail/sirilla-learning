@@ -9,7 +9,7 @@
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
     "jwt-decode": "^2.2.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "prettier": "^2.0.5",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
